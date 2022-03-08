@@ -21,12 +21,19 @@
                 <%});%>
             </ol>
 
-            <p>
-              <%= error.debug.nlu_u %><br>
-                <%= error.debug.nlu_a %><br>
-                  <%= error.debug.cl_a %><br>
-                    <%= error.debug.cl_u %><br>
-            </p>
+            <li style="color: black;">
+              <%= debug.nlu_u %>
+            </li>
+            <li style="color: black;">
+              <%= debug.nlu_a %><br>
+            </li>
+            <li style="color: black;">
+              <%= debug.cl_a %><br>
+            </li>
+            <li style="color: black;">
+              <%= debug.cl_u %><br>
+            </li>
+            
           </div>
           <form action="" method="POST">
 
