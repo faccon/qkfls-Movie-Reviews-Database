@@ -47,10 +47,10 @@ if (dotenv.error) {
 }
 
 // logging variables for debug purposes:
-console.log(`NLU_APIKEY: ${NLU_APIKEY}`);
-console.log(`NLU_URL: ${NLU_URL}`);
-console.log(`CLOUDANT_API: ${CLOUDANT_API}`);
-console.log(`CLOUDANT_URL: ${CLOUDANT_URL}`);
+// console.log(`NLU_APIKEY: ${NLU_APIKEY}`);
+// console.log(`NLU_URL: ${NLU_URL}`);
+// console.log(`CLOUDANT_API: ${CLOUDANT_API}`);
+// console.log(`CLOUDANT_URL: ${CLOUDANT_URL}`);
 
 if (CLOUDANT_API && CLOUDANT_URL) {
   var Cloudant = require("@cloudant/cloudant");
@@ -88,12 +88,6 @@ app.get("/", function (req, res, next) {
   if (errors && errors.length > 0) {
     res.render("index.ejs", {
       msg: { errors: errors },
-      debug: {
-        nlu_a: NLU_APIKEY,
-        nlu_u: NLU_URL,
-        cl_a: CLOUDANT_API,
-        cl_u: CLOUDANT_URL,
-      },
     });
   } else {
     res.render("index.ejs", { msg: {} });
